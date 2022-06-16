@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { SpinnerCircular } from 'spinners-react';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import s from './ContactForm.module.css';
 import { useGetContactsQuery, useAddContactsMutation } from '../../redux/contactsApi'
 
@@ -27,12 +29,11 @@ export default function ContactForm() {
     const handleSubmit = event => {
         event.preventDefault();
         if (contacts.find(contact => contact.name === name)) {
-            return alert(`${name} is already in contacts`);
+            return Notify.info(`${name} is already in contacts`);
         }
-        if (name === '') {
-            return alert('Please text the contact name');
-        }
+        
         addContact({ name, number })
+        Notify.info(`${name} was added to the contact list`)
         resetForm();
     }
 
@@ -72,6 +73,7 @@ export default function ContactForm() {
             <button className={s.btn} type="submit" disabled={isLoading}>
                 Add contact
             </button>
+            {isLoading && <SpinnerCircular size="30" />}
         </form>
     );
 }
