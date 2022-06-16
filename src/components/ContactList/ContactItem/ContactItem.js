@@ -7,7 +7,8 @@ export default function ContactItem({ id, name, number }) {
   const [removeContact] = useRemoveContactsMutation()
   return (
     <li className={s.item} key={id}>
-      {name}: {number}
+      <p>{name}</p>
+      <p className={s.phone}>{number}</p>
       <button
         className={s.btn}
         type="button"

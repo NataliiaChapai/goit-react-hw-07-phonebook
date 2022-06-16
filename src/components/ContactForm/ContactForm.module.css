@@ -1,5 +1,6 @@
 .form {
-  width: 200px;
+  width: 300px;
+  margin: 0 auto;
 }
 
 .label {
@@ -10,10 +11,9 @@
 
 .input {
   height: 20px;
-  width: 200px;
+  width: 300px;
   margin-bottom: 15px;
   margin-top: 5px;
-  border-radius: 5px;
   border: 1px solid rgb(2, 134, 134);
   box-shadow: 0px 0px 3px 0px rgb(2, 134, 134);
 }
@@ -25,7 +25,11 @@
   color: rgb(2, 134, 134);
   padding: 5px 15px;
   display: block;
-  border-radius: 5px;
   border: 1px solid rgb(2, 134, 134);
   box-shadow: 0px 0px 3px 0px rgb(2, 134, 134);
+}
+
+.btn:hover {
+  background-color: #fff;
+  cursor: pointer;
 }

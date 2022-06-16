@@ -1,9 +1,14 @@
 .item {
-  align-items: flex-end;
+  align-items: center;
   margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 170px 150px 100px;
   color: rgb(2, 134, 134);
+  text-align: left;
+  border: 1px solid rgb(2, 134, 134);
+  box-shadow: 0px 0px 3px 0px rgb(2, 134, 134);
+  padding: 10px;
+  background-color: #fff;
 }
 
 .btn {
@@ -12,7 +17,15 @@
   color: rgb(2, 134, 134);
   padding: 5px 15px;
   display: block;
-  border-radius: 5px;
   border: 1px solid rgb(2, 134, 134);
   box-shadow: 0px 0px 3px 0px rgb(2, 134, 134);
+}
+
+.btn:hover {
+background-color: #fff;
+cursor: pointer;
+}
+
+.phone {
+  font-weight: 600;
 }
