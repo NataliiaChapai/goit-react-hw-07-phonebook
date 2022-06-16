@@ -7,7 +7,6 @@ import { getFilter } from '../../redux/contactsSlice';
 
 export default function ContactList() {
   const filterContact = useSelector(getFilter);
-  console.log(filterContact.filter);
   const { data: contacts, isSuccess } = useGetContactsQuery();
 
   if (!isSuccess) {
@@ -15,7 +14,7 @@ export default function ContactList() {
   }
   
   const formData = contacts.filter(contact =>
-    contact.name.toLowerCase().includes(filterContact.filter.toLowerCase())
+    contact.name.toLowerCase().includes(filterContact.toLowerCase())
   );
   
   return (
