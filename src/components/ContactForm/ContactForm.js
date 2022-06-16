@@ -29,7 +29,7 @@ export default function ContactForm() {
     const handleSubmit = event => {
         event.preventDefault();
         if (contacts.find(contact => contact.name === name)) {
-            return Notify.info(`${name} is already in contacts`);
+            return Notify.info(`${name} is already in the contact list`);
         }
         
         addContact({ name, number })
